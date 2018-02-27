@@ -10,7 +10,6 @@ public class enemigo : MonoBehaviour {
 	float TimerX = 0.0f;
 	float TimerY = 0.0f;
 
-
 	// Use this for initialization
 	void Start () 
 	{
@@ -22,27 +21,24 @@ public class enemigo : MonoBehaviour {
 	void Update ()
 	{
 		
-			transform.position += new Vector3 (Time.deltaTime * velocidadH, 0, 0);
-			TimerX += Time.deltaTime;
-				
+		transform.position += new Vector3 (Time.deltaTime * velocidadH, 0, 0);
+		TimerX += Time.deltaTime;
+
 			if (TimerX > 1.0f) 
 			{
 				velocidadH *= -1;
 				TimerX = 0;
 			}
+			
+	
+		transform.position += new Vector3 (0,Time.deltaTime*velocidadV,0);
+		TimerY += Time.deltaTime;
 
-	
-	
-	
-			transform.position += new Vector3 (0,Time.deltaTime*velocidadV,0);
-			TimerY += Time.deltaTime;
-		
 			if (TimerY > 1.0f) 
 			{
 				velocidadV *= -1;
 				TimerY = 0;
 			}
-	
 
-}
+	}
 }

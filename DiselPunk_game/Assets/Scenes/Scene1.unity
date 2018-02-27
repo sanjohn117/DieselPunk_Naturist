@@ -308,12 +308,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 156149109}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4697c9f222666054d8ec8d5a75dcab59, type: 3}
+  m_Script: {fileID: 11500000, guid: f795e0ccbed1e4146ad7fd4117aa65cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadH: 0
-  velocidadV: 10
-  vida: 0
+  velocidadX: 5
+  velocidadY: 0
 --- !u!212 &156149111
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -394,12 +393,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 787857704}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4697c9f222666054d8ec8d5a75dcab59, type: 3}
+  m_Script: {fileID: 11500000, guid: f795e0ccbed1e4146ad7fd4117aa65cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadH: 69
-  velocidadV: 0
-  vida: 0
+  velocidadX: 0
+  velocidadY: 5
 --- !u!212 &787857706
 SpriteRenderer:
   m_ObjectHideFlags: 0
