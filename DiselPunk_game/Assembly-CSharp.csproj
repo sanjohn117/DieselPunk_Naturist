@@ -53,6 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\enemigo.cs" />
      <Compile Include="Assets\Scripts\Guardia.cs" />
+     <Compile Include="Assets\Scripts\Muro.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
