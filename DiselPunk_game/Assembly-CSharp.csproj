@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\colision.cs" />
      <Compile Include="Assets\Scripts\enemigo.cs" />
      <Compile Include="Assets\Scripts\Guardia.cs" />
      <Compile Include="Assets\Scripts\Muro.cs" />

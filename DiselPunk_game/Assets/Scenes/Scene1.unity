@@ -118,10 +118,11 @@ GameObject:
   - component: {fileID: 66259602}
   - component: {fileID: 66259601}
   - component: {fileID: 66259600}
+  - component: {fileID: 66259604}
   - component: {fileID: 66259603}
   m_Layer: 0
   m_Name: Square (3)
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,9 +138,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4697c9f222666054d8ec8d5a75dcab59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadH: 0
-  velocidadV: 12
-  vida: 0
+  speed: 0
+  vida: 100
+  timer: 0
+  "da\xF1o": 10
 --- !u!212 &66259601
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -189,37 +191,42 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 66259599}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.9503016, y: -2.981219, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -13.22, y: -3.51, z: 0}
+  m_LocalScale: {x: 0.9658494, y: 0.9934982, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &66259603
-BoxCollider2D:
+--- !u!114 &66259603
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 66259599}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4697c9f222666054d8ec8d5a75dcab59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  vida: 100
+  timer: 0
+  "da\xF1o": 10
+--- !u!54 &66259604
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 66259599}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &136529722
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,10 +326,10 @@ GameObject:
   - component: {fileID: 156149112}
   - component: {fileID: 156149111}
   - component: {fileID: 156149110}
-  - component: {fileID: 156149113}
+  - component: {fileID: 156149114}
   m_Layer: 0
   m_Name: Square (2)
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -389,37 +396,27 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 156149109}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.4, y: -10.3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -4.43, y: -10.47, z: 0}
+  m_LocalScale: {x: 0.9658494, y: 0.9934982, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &156149113
-BoxCollider2D:
+--- !u!54 &156149114
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 156149109}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &379475573
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,7 +429,7 @@ GameObject:
   - component: {fileID: 379475574}
   m_Layer: 0
   m_Name: Muro (7)
-  m_TagString: Untagged
+  m_TagString: Muro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -512,7 +509,7 @@ Transform:
   m_GameObject: {fileID: 379475573}
   m_LocalRotation: {x: -0, y: -0, z: 0.70710576, w: 0.70710784}
   m_LocalPosition: {x: 0.5, y: 7.1, z: 0}
-  m_LocalScale: {x: 2.1883905, y: 15.124541, z: 7.773276}
+  m_LocalScale: {x: 2.1883905, y: 15.124541, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
@@ -529,7 +526,7 @@ GameObject:
   - component: {fileID: 410976910}
   m_Layer: 0
   m_Name: Muro
-  m_TagString: Untagged
+  m_TagString: Muro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -584,7 +581,7 @@ Transform:
   m_GameObject: {fileID: 410976907}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 18.2, y: -0.9, z: 0}
-  m_LocalScale: {x: 2.1883905, y: 15.124541, z: 7.773276}
+  m_LocalScale: {x: 2.1883905, y: 15.124541, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -626,7 +623,7 @@ GameObject:
   - component: {fileID: 510573276}
   m_Layer: 0
   m_Name: Muro (4)
-  m_TagString: Untagged
+  m_TagString: Muro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -681,7 +678,7 @@ Transform:
   m_GameObject: {fileID: 510573273}
   m_LocalRotation: {x: -0, y: -0, z: 0.70669156, w: 0.7075218}
   m_LocalPosition: {x: -0.2, y: -12.54, z: 0}
-  m_LocalScale: {x: 3.0004714, y: 50.78851, z: 4.3007126}
+  m_LocalScale: {x: 3.0004714, y: 50.78851, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
@@ -723,7 +720,7 @@ GameObject:
   - component: {fileID: 564144947}
   m_Layer: 0
   m_Name: Muro (3)
-  m_TagString: Untagged
+  m_TagString: Muro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -778,7 +775,7 @@ Transform:
   m_GameObject: {fileID: 564144944}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -24.39, y: 0.51, z: 0}
-  m_LocalScale: {x: 2.6851435, y: 26.17921, z: 5.863204}
+  m_LocalScale: {x: 2.6851435, y: 26.17921, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
@@ -820,7 +817,7 @@ GameObject:
   - component: {fileID: 666964274}
   m_Layer: 0
   m_Name: Muro (8)
-  m_TagString: Untagged
+  m_TagString: Muro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -900,7 +897,7 @@ Transform:
   m_GameObject: {fileID: 666964273}
   m_LocalRotation: {x: -0, y: -0, z: 0.70710576, w: 0.70710784}
   m_LocalPosition: {x: 0.5, y: -7.8, z: 0}
-  m_LocalScale: {x: 2.1883905, y: 15.124541, z: 7.773276}
+  m_LocalScale: {x: 2.1883905, y: 15.124541, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
@@ -915,10 +912,10 @@ GameObject:
   - component: {fileID: 787857707}
   - component: {fileID: 787857706}
   - component: {fileID: 787857705}
-  - component: {fileID: 787857708}
+  - component: {fileID: 787857709}
   m_Layer: 0
   m_Name: Square (1)
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -985,37 +982,27 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 787857704}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.2, y: 9.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -4.23, y: 9.2, z: 0}
+  m_LocalScale: {x: 0.9658494, y: 0.9934982, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &787857708
-BoxCollider2D:
+--- !u!54 &787857709
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 787857704}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1416555576
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,7 +1015,7 @@ GameObject:
   - component: {fileID: 1416555579}
   m_Layer: 0
   m_Name: Muro (2)
-  m_TagString: Untagged
+  m_TagString: Muro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1083,7 +1070,7 @@ Transform:
   m_GameObject: {fileID: 1416555576}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071233, w: 0.7070904}
   m_LocalPosition: {x: 0.16, y: 12.27, z: 0}
-  m_LocalScale: {x: 2.995788, y: 50.47891, z: 4.3007126}
+  m_LocalScale: {x: 2.995788, y: 50.47891, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -1125,7 +1112,7 @@ GameObject:
   - component: {fileID: 1515686604}
   m_Layer: 0
   m_Name: Muro (6)
-  m_TagString: Untagged
+  m_TagString: Muro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1205,7 +1192,7 @@ Transform:
   m_GameObject: {fileID: 1515686603}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.7, y: -0.2, z: 0}
-  m_LocalScale: {x: 5.289395, y: 5.083175, z: 7.773276}
+  m_LocalScale: {x: 5.289395, y: 5.083175, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
@@ -1223,7 +1210,7 @@ GameObject:
   - component: {fileID: 1519413047}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1239,9 +1226,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4697c9f222666054d8ec8d5a75dcab59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadH: -10
-  velocidadV: 0
-  vida: 0
+  speed: 10
+  vida: 100
+  timer: 0
+  "da\xF1o": 10
 --- !u!212 &1519413045
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1291,37 +1279,27 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1519413043}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.9, y: 4.5, z: 0}
+  m_LocalPosition: {x: 9.6, y: -0.2000002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1519413047
-BoxCollider2D:
+--- !u!54 &1519413047
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1519413043}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1674247848
 GameObject:
   m_ObjectHideFlags: 0
@@ -1332,10 +1310,11 @@ GameObject:
   - component: {fileID: 1674247851}
   - component: {fileID: 1674247850}
   - component: {fileID: 1674247849}
+  - component: {fileID: 1674247853}
   - component: {fileID: 1674247852}
   m_Layer: 0
   m_Name: Square (4)
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1351,9 +1330,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4697c9f222666054d8ec8d5a75dcab59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadH: 10
-  velocidadV: 0
-  vida: 0
+  speed: 0
+  vida: 100
+  timer: 0
+  "da\xF1o": 10
 --- !u!212 &1674247850
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1403,37 +1383,42 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1674247848}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.3, y: -4.6, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 4.94, y: -4.81, z: 0}
+  m_LocalScale: {x: 0.9658494, y: 0.9934982, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1674247852
-BoxCollider2D:
+--- !u!114 &1674247852
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1674247848}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4697c9f222666054d8ec8d5a75dcab59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  vida: 100
+  timer: 0
+  "da\xF1o": 10
+--- !u!54 &1674247853
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1674247848}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1902926596
 GameObject:
   m_ObjectHideFlags: 0
@@ -1446,7 +1431,7 @@ GameObject:
   - component: {fileID: 1902926597}
   m_Layer: 0
   m_Name: Muro (5)
-  m_TagString: Untagged
+  m_TagString: Muro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1526,7 +1511,7 @@ Transform:
   m_GameObject: {fileID: 1902926596}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -17.7, y: -0.9, z: 0}
-  m_LocalScale: {x: 2.1883905, y: 15.124541, z: 7.773276}
+  m_LocalScale: {x: 2.1883905, y: 15.124541, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
@@ -1543,7 +1528,7 @@ GameObject:
   - component: {fileID: 1932314184}
   m_Layer: 0
   m_Name: Muro (1)
-  m_TagString: Untagged
+  m_TagString: Muro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1598,7 +1583,7 @@ Transform:
   m_GameObject: {fileID: 1932314181}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 23.95, y: 3.69, z: 0}
-  m_LocalScale: {x: 2.3148193, y: 19.202686, z: 4.3007126}
+  m_LocalScale: {x: 2.3148193, y: 19.202686, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7

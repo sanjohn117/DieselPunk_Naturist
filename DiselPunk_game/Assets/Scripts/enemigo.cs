@@ -4,41 +4,53 @@ using UnityEngine;
 
 public class enemigo : MonoBehaviour {
 
-	public float velocidadH;
-	public float velocidadV;
-	public float vida= 0.0f;
-	float TimerX = 0.0f;
-	float TimerY = 0.0f;
+	public float speed;
+	public int vida = 100;
+	public float timer = 0;
+	public int daño = 10;
+	bool enContacto = false;
 
 	// Use this for initialization
-	void Start () 
-	{
+	void Start () {
 
-		
 	}
-	
+
 	// Update is called once per frame
-	void Update ()
+	void Update () {
+		print(timer);
+		transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
+
+		if(enContacto == true)
+			timer += Time.deltaTime;
+
+		if (timer >= 1)
+		{
+			timer = 0;
+			vida -= daño;
+		}
+	}
+
+	private void OnCollisionEnter2D(Collision collision)
 	{
-		
-		transform.position += new Vector3 (Time.deltaTime * velocidadH, 0, 0);
-		TimerX += Time.deltaTime;
+		GameObject colisionado = collision.gameObject;
+		//print(colisionado.transform.tag);
+		if (colisionado.transform.tag == "Muro")
+			speed *= -1;
 
-			if (TimerX > 1.0f) 
-			{
-				velocidadH *= -1;
-				TimerX = 0;
-			}
-			
-	
-		transform.position += new Vector3 (0,Time.deltaTime*velocidadV,0);
-		TimerY += Time.deltaTime;
 
-			if (TimerY > 1.0f) 
-			{
-				velocidadV *= -1;
-				TimerY = 0;
-			}
+
+		if (colisionado.transform.tag == "Enemigo")
+			enContacto = true;
 
 	}
+
+	private void OnCollisionExit2D(Collision collision)
+	{
+		GameObject colisionado = collision.gameObject;
+		if (colisionado.transform.tag == "Enemigo")
+			enContacto = false;
+	}
+
+
+
 }
