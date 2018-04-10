@@ -34,6 +34,14 @@ public class enemigo : MonoBehaviour {
             
         }
 	}
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        GameObject colisionado = collision.gameObject;
+
+        if (colisionado.transform.tag == "Enemigo")
+            enContacto = true;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject colisionado = collision.gameObject;
@@ -42,16 +50,19 @@ public class enemigo : MonoBehaviour {
             speed *= -1;
 
         if (colisionado.transform.tag == "Player")
-            speed *= -1;
-
-        if (colisionado.transform.tag == "Enemigo")
-            enContacto = true;
+            speed *= -1;       
     }
-
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         GameObject colisionado = collision.gameObject;
         if (colisionado.transform.tag == "Enemigo")
             enContacto = false;
     }
+
+    //private void OnCollisionExit2D(Collision2D collision)
+    //{
+      //  GameObject colisionado = collision.gameObject;
+      //  if (colisionado.transform.tag == "Enemigo")
+      //      enContacto = false;
+    //}
 }
